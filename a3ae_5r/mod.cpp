@@ -1,5 +1,5 @@
-name = "Antistasi 5R Extension";
-author = "Cathode";
-tooltip = "Antistasi 5R Extension";
-actionName = "5 RANGER Discord";
-action = "https://discord.gg/5RANGER";
+name = "A3 Antistasi 5RANGER";
+author = "A3-Antistasi dev team & Cathode";
+tooltip = "Antistasi Extender 5R";
+actionName = "GitHub";
+action = "https://github.com/HakonRydland/A3AExtender";

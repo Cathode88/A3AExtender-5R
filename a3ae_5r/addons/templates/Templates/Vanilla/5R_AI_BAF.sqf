@@ -236,7 +236,7 @@ _loadoutData set ["items_unarmed_extras", []];
 ///////////////////////////////////////
 
 private _sfLoadoutData = _loadoutData call _fnc_copyLoadoutData; // touch and shit breaks
-_sfLoadoutData set ["uniforms", ["UK3CB_BAF_U_CombatUniform_DDPM"]];					//don't fill this line - this is only to set the variable
+_sfLoadoutData set ["uniforms", ["UK3CB_BAF_U_CombatUniform_MTP"]];					//don't fill this line - this is only to set the variable
 _sfLoadoutData set ["vests", ["5r_vests_virtus_A_tbl","5r_vests_virtus_B_tbl","5r_vests_virtus_C_tbl","5r_vests_virtus_D_tbl","5r_vests_virtus_F"]];				//this line determines vests for special forces -- Example: ["V_PlateCarrierSpec_mtp", "V_PlateCarrierGL_mtp"] -- Array, can contain multiple assets
 _sfLoadoutData set ["Hvests", ["5r_vests_virtus_G","5r_vests_virtus_E"]];
 _sfLoadoutData set ["backpacks", ["5r_backpacks_daysack","5r_backpacks_camel","5r_backpacks_daysack_m","5r_backpacks_daysack_mic","5r_backpacks_daysack_p","5r_backpacks_daysack_pic"]];			//this line determines backpacks for special forces -- Example: ["B_AssaultPack_mcamo", "B_Kitbag_mcamo"] -- Array, can contain multiple assets
@@ -244,69 +244,54 @@ _sfLoadoutData set ["helmets", ["5r_headgear_virtus_D","5r_headgear_virtus_J","5
 _sfLoadoutData set ["binoculars", ["Laserdesignator_03"]];
 
 _sfLoadoutData set ["rifles", [
-["MCC_KS1_FDE_Bravo", "muzzle_snds_M", "ACE_DBAL_A3_Red", "optic_MRCO", ["rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"], [], ""],
-["MCC_KS1_FDE_Bravo", "muzzle_snds_M", "ACE_DBAL_A3_Red", "optic_Hamr", ["rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"], [], ""]
+["MCC_KS1_FDE_Bravo", "rhsusf_acc_nt4_tan", "ACE_DBAL_A3_Red", "rhsusf_acc_su230_mrds_c", ["rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"], [], ""]
 ]];
 _sfLoadoutData set ["carbines", [
-["MCC_KS3_FDE_Bravo", "muzzle_snds_M", "ACE_DBAL_A3_Red", "optic_Holosight_blk_F", ["rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"], [], ""],
-["MCC_KS3_FDE_Bravo", "muzzle_snds_M", "ACE_DBAL_A3_Red", "optic_Holosight_lush_F", ["rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"], [], ""]
+["MCC_KS3_FDE_Bravo", "rhsusf_acc_nt4_tan", "ACE_DBAL_A3_Red", "MCC_EXPS3_FDE_Down", ["rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"], [], ""]
 ]];
 _sfLoadoutData set ["grenadeLaunchers", [
-["rhs_weap_mk18_m320", "muzzle_snds_M", "ACE_DBAL_A3_Red", "optic_MRCO", ["rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"], ["rhs_mag_M433_HEDP", "rhs_mag_M433_HEDP", "rhs_mag_M397_HET"], ""],
-["rhs_weap_mk18_m320", "muzzle_snds_M", "ACE_DBAL_A3_Red", "optic_Hamr", ["rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"], ["rhs_mag_M433_HEDP", "rhs_mag_M433_HEDP", "rhs_mag_M397_HET"], ""]
+["rhs_weap_mk18_m320", "rhsusf_acc_nt4_tan", "ACE_DBAL_A3_Red", "rhsusf_acc_su230_mrds_c", ["rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"], ["rhs_mag_M433_HEDP", "rhs_mag_M433_HEDP", "rhs_mag_M397_HET"], ""]
 ]];
 _sfLoadoutData set ["SMGs", []];
 _sfLoadoutData set ["machineGuns", [
-["UK3CB_BAF_L110_762", "rhsusf_acc_su230a_mrds_c", "ACE_DBAL_A3_Red", "", ["UK3CB_BAF_762_100Rnd","UK3CB_BAF_762_100Rnd_T"]]
+["UK3CB_BAF_L110_762", "", "ACE_DBAL_A3_Red", "rhsusf_acc_su230a_mrds_c", ["UK3CB_BAF_762_100Rnd","UK3CB_BAF_762_100Rnd_T"]]
 ]];
 _sfLoadoutData set ["marksmanRifles", [
-["srifle_EBR_F", "muzzle_snds_B", "ACE_DBAL_A3_Red", "optic_SOS", [], [], "bipod_01_F_blk"],
-["srifle_EBR_F", "muzzle_snds_B", "ACE_DBAL_A3_Red", "optic_Hamr", [], [], "bipod_01_F_blk"]
+["UK3CB_BAF_L129A1", "UK3CB_BAF_Silencer_L115A3", "ACE_DBAL_A3_Red", "rhsusf_acc_su230_mrds_c", [], [], "UK3CB_underbarrel_acc_bipod"]
 ]];
 _sfLoadoutData set ["sniperRifles", []];
-_sfLoadoutData set ["sidearms", [
-["hgun_Pistol_heavy_01_F", "muzzle_snds_acp", "acc_flashlight_pistol", "", [], [], ""],
-["hgun_ACPC2_F", "muzzle_snds_acp", "acc_flashlight_pistol", "", [], [], ""]
-]];
+_sfLoadoutData set ["sidearms", []];
 /////////////////////////////////
 //    Military Loadout Data    //
 /////////////////////////////////
 
 private _militaryLoadoutData = _loadoutData call _fnc_copyLoadoutData; // touch and shit breaks
-_militaryLoadoutData set ["uniforms", ["U_I_CombatUniform_shortsleeve", "U_I_CombatUniform"]];		//this line determines uniforms for military loadouts -- Example: ["U_B_CombatUniform_mcam", "U_B_CombatUniform_mcam_tshirt"] -- Array, can contain multiple assets
-_militaryLoadoutData set ["slUniforms", ["U_I_OfficerUniform"]];
-_militaryLoadoutData set ["vests", ["V_PlateCarrierIA2_dgtl", "V_PlateCarrierIA1_dgtl"]];			//this line determines vests for military loadouts -- Example: ["V_PlateCarrierSpec_mtp", "V_PlateCarrierGL_mtp"] -- Array, can contain multiple assets
-_militaryLoadoutData set ["Hvests", ["V_PlateCarrierIAGL_dgtl"]];
-_militaryLoadoutData set ["backpacks", ["B_TacticalPack_oli", "B_FieldPack_oli", "B_Carryall_oli", "B_AssaultPack_dgtl"]];		//this line determines backpacks for military loadouts -- Example: ["B_AssaultPack_mcamo", "B_Kitbag_mcamo"] -- Array, can contain multiple assets
-_militaryLoadoutData set ["helmets", ["H_HelmetIA"]];		//this line determines helmets for military loadouts -- Example: ["H_HelmetB_camo", "H_HelmetB_desert"] -- Array, can contain multiple assets
+_militaryLoadoutData set ["uniforms", ["UK3CB_BAF_U_CombatUniform_MTP"]];		//this line determines uniforms for military loadouts -- Example: ["U_B_CombatUniform_mcam", "U_B_CombatUniform_mcam_tshirt"] -- Array, can contain multiple assets
+_militaryLoadoutData set ["slUniforms", ["UK3CB_BAF_U_CombatUniform_MTP"]];
+_militaryLoadoutData set ["vests", ["5r_vests_virtus_A_tbl","5r_vests_virtus_B_tbl","5r_vests_virtus_C_tbl","5r_vests_virtus_D_tbl","5r_vests_virtus_F"]];			//this line determines vests for military loadouts -- Example: ["V_PlateCarrierSpec_mtp", "V_PlateCarrierGL_mtp"] -- Array, can contain multiple assets
+_militaryLoadoutData set ["Hvests", ["5r_vests_virtus_G","5r_vests_virtus_E"]];
+_militaryLoadoutData set ["backpacks", ["5r_backpacks_daysack","5r_backpacks_camel","5r_backpacks_daysack_m","5r_backpacks_daysack_mic","5r_backpacks_daysack_p","5r_backpacks_daysack_pic"]];		//this line determines backpacks for military loadouts -- Example: ["B_AssaultPack_mcamo", "B_Kitbag_mcamo"] -- Array, can contain multiple assets
+_militaryLoadoutData set ["helmets", ["5r_headgear_virtus_D","5r_headgear_virtus_J","5r_headgear_virtus_I","5r_headgear_virtus_F","5r_headgear_virtus_B","5r_headgear_virtus_C","5r_headgear_virtus_H","5r_headgear_virtus_G","5r_headgear_virtus_A","5r_headgear_virtus_K","5r_headgear_virtus_M","5r_headgear_virtus_E","5r_headgear_virtus_L","5r_headgear_virtus_N"]];		//this line determines helmets for military loadouts -- Example: ["H_HelmetB_camo", "H_HelmetB_desert"] -- Array, can contain multiple assets
 _militaryLoadoutData set ["binoculars", ["Laserdesignator_03"]];
 
 _militaryLoadoutData set ["rifles", [
-["MCC_KS1_FDE_Bravo", "", "ACE_DBAL_A3_Red", "optic_MRCO", ["rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"], [], ""],
-["MCC_KS1_FDE_Bravo", "", "ACE_DBAL_A3_Red", "optic_Hamr", ["rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"], [], ""]
+["MCC_KS1_FDE_Bravo", "", "ACE_DBAL_A3_Red", "rhsusf_acc_su230_mrds_c", ["rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"], [], ""]
 ]];
 _militaryLoadoutData set ["carbines", [
-["MCC_KS3_FDE_Bravo", "", "ACE_DBAL_A3_Red", "optic_Holosight_blk_F", ["rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"], [], ""],
-["MCC_KS3_FDE_Bravo", "", "ACE_DBAL_A3_Red", "optic_Holosight_lush_F", ["rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"], [], ""]
+["MCC_KS3_FDE_Bravo", "", "ACE_DBAL_A3_Red", "MCC_EXPS3_FDE_Down", ["rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"], [], ""],
+["MCC_KS3_FDE_Bravo", "", "ACE_DBAL_A3_Red", "MCC_EXPS3_FDE", ["rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"], [], ""]
 ]];
 _militaryLoadoutData set ["grenadeLaunchers", [
-["rhs_weap_mk18_m320", "", "ACE_DBAL_A3_Red", "optic_MRCO", ["rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"], ["rhs_mag_M433_HEDP", "rhs_mag_M433_HEDP", "rhs_mag_M397_HET"], ""],
-["rhs_weap_mk18_m320", "", "ACE_DBAL_A3_Red", "optic_Hamr", ["rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"], ["rhs_mag_M433_HEDP", "rhs_mag_M433_HEDP", "rhs_mag_M397_HET"], ""]
+["rhs_weap_mk18_m320", "", "ACE_DBAL_A3_Red", "rhsusf_acc_su230_mrds_c", ["rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"], ["rhs_mag_M433_HEDP", "rhs_mag_M433_HEDP", "rhs_mag_M397_HET"], ""]
 ]];
 _militaryLoadoutData set ["SMGs", []];
 _militaryLoadoutData set ["machineGuns", [
-["LMG_Mk200_F", "", "ACE_DBAL_A3_Red", "optic_MRCO", ["200Rnd_65x39_cased_Box_Red", "200Rnd_65x39_cased_Box_Red", "200Rnd_65x39_cased_Box_Tracer_Red"], [], "bipod_01_F_blk"],
-["LMG_Mk200_F", "", "ACE_DBAL_A3_Red", "optic_Holosight_blk_F", ["200Rnd_65x39_cased_Box_Red", "200Rnd_65x39_cased_Box_Red", "200Rnd_65x39_cased_Box_Tracer_Red"], [], "bipod_01_F_blk"],
-["LMG_Mk200_F", "", "ACE_DBAL_A3_Red", "optic_Hamr", ["200Rnd_65x39_cased_Box_Red", "200Rnd_65x39_cased_Box_Red", "200Rnd_65x39_cased_Box_Tracer_Red"], [], "bipod_01_F_blk"]
+["UK3CB_BAF_L7A2", "", "ACE_DBAL_A3_Red", "rhsusf_acc_su230a_mrds_c", ["UK3CB_BAF_762_100Rnd", "UK3CB_BAF_762_100Rnd", "UK3CB_BAF_762_100Rnd_T"], [], "UK3CB_underbarrel_acc_fgrip_bipod"]
 ]];
 _militaryLoadoutData set ["marksmanRifles", [
-["srifle_EBR_F", "", "ACE_DBAL_A3_Red", "optic_SOS", [], [], "bipod_01_F_blk"],
-["srifle_EBR_F", "", "ACE_DBAL_A3_Red", "optic_Hamr", [], [], "bipod_01_F_blk"]
+["UK3CB_BAF_L129A1", "", "ACE_DBAL_A3_Red", "UK3CB_BAF_TA648_308", [], [], "UK3CB_underbarrel_acc_bipod"]
 ]];
-_militaryLoadoutData set ["sniperRifles", [
-["srifle_GM6_F", "", "", "optic_SOS", ["5Rnd_127x108_Mag", "5Rnd_127x108_APDS_Mag"], [], ""],
-["srifle_GM6_F", "", "", "optic_LRPS", ["5Rnd_127x108_Mag", "5Rnd_127x108_APDS_Mag"], [], ""]
-]];
+_militaryLoadoutData set ["sniperRifles", []];
 _militaryLoadoutData set ["sidearms", [
 ["hgun_Pistol_heavy_01_F", "", "acc_flashlight_pistol", "", [], [], ""],
 ["hgun_ACPC2_F", "", "acc_flashlight_pistol", "", [], [], ""]
@@ -320,46 +305,35 @@ _policeLoadoutData set ["uniforms", ["U_B_GEN_Soldier_F", "U_B_GEN_Commander_F"]
 _policeLoadoutData set ["vests", ["V_TacVest_blk_POLICE"]];
 _policeLoadoutData set ["helmets", ["H_Cap_police"]];
 _policeLoadoutData set ["SMGs", [
-["SMG_01_F", "", "acc_flashlight_smg_01", "optic_Holosight", [], [], ""],
-["SMG_01_F", "", "acc_flashlight_smg_01", "optic_Yorris", [], [], ""],
-["SMG_01_F", "", "acc_flashlight_smg_01", "optic_Aco_smg", [], [], ""],
-["SMG_03C_TR_black", "", "acc_flashlight", "optic_Holosight_blk_F", [], [], ""],
-["SMG_03C_TR_black", "", "acc_flashlight", "optic_Yorris", [], [], ""],
-["SMG_03C_TR_black", "", "acc_flashlight", "optic_Aco_smg", [], [], ""],
-["SMG_02_F", "", "acc_flashlight", "optic_Holosight_blk_F", [], [], ""],
-["SMG_02_F", "", "acc_flashlight", "optic_Yorris", [], [], ""],
-["SMG_02_F", "", "acc_flashlight", "optic_Aco_smg", [], [], ""]
+["SMG_01_F", "", "acc_flashlight_smg_01", "MCC_EXPS3_FDE", [], [], ""]
 ]];
-_policeLoadoutData set ["sidearms", ["hgun_Rook40_F"]];
+_policeLoadoutData set ["sidearms", []];
 ////////////////////////////////
 //    Militia Loadout Data    //
 ////////////////////////////////
 
 private _militiaLoadoutData = _loadoutData call _fnc_copyLoadoutData; // touch and shit breaks
-_militiaLoadoutData set ["uniforms", ["U_I_CombatUniform", "U_I_CombatUniform_shortsleeve"]];		//this line determines uniforms for militia loadouts -- Example: ["U_B_CombatUniform_mcam", "U_B_CombatUniform_mcam_tshirt"] -- Array, can contain multiple assets
-_militiaLoadoutData set ["vests", ["V_BandollierB_oli", "V_Chestrig_oli"]];			//this line determines vests for militia loadouts -- Example: ["V_PlateCarrierSpec_mtp", "V_PlateCarrierGL_mtp"] -- Array, can contain multiple assets
-_militiaLoadoutData set ["Hvests", ["V_TacVest_oli"]];
-_militiaLoadoutData set ["backpacks", ["B_TacticalPack_oli", "B_FieldPack_oli", "B_AssaultPack_dgtl"]];		//this line determines backpacks for militia loadouts -- Example: ["B_AssaultPack_mcamo", "B_Kitbag_mcamo"] -- Array, can contain multiple assets
-_militiaLoadoutData set ["helmets", ["H_MilCap_dgtl", "H_HelmetIA"]];		//this line determines helmets for police loadouts -- Example: ["H_HelmetB_camo", "H_HelmetB_desert"] -- Array, can contain multiple assets
+_militiaLoadoutData set ["uniforms", ["UK3CB_BAF_U_CombatUniform_MTP"]];		//this line determines uniforms for militia loadouts -- Example: ["U_B_CombatUniform_mcam", "U_B_CombatUniform_mcam_tshirt"] -- Array, can contain multiple assets
+_militiaLoadoutData set ["vests", ["V_Chestrig_rgr"]];			//this line determines vests for militia loadouts -- Example: ["V_PlateCarrierSpec_mtp", "V_PlateCarrierGL_mtp"] -- Array, can contain multiple assets
+_militiaLoadoutData set ["Hvests", ["V_PlateCarrier2_rgr_noflag_F","UK3CB_V_PlateCarrier2_brn"]];
+_militiaLoadoutData set ["backpacks", ["B_AssaultPack_mcamo","B_Kitbag_mcamo"]];		//this line determines backpacks for militia loadouts -- Example: ["B_AssaultPack_mcamo", "B_Kitbag_mcamo"] -- Array, can contain multiple assets
+_militiaLoadoutData set ["helmets", ["5r_headgear_virtus_D","5r_headgear_virtus_J","5r_headgear_virtus_I","5r_headgear_virtus_F","5r_headgear_virtus_B","5r_headgear_virtus_C","5r_headgear_virtus_H","5r_headgear_virtus_G","5r_headgear_virtus_A","5r_headgear_virtus_K","5r_headgear_virtus_M","5r_headgear_virtus_E","5r_headgear_virtus_L","5r_headgear_virtus_N"]];		//this line determines helmets for police loadouts -- Example: ["H_HelmetB_camo", "H_HelmetB_desert"] -- Array, can contain multiple assets
 
 _militiaLoadoutData set ["rifles", [
-["MCC_KS1_FDE_Bravo", "", "", "", ["rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"], [], ""],
-["arifle_TRG21_F", "", "", "", ["rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"], [], ""]
+["MCC_KS1_FDE_Bravo", "", "", "", ["rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"], [], ""]
 ]];
 _militiaLoadoutData set ["carbines", [
-["MCC_KS3_FDE_Bravo", "", "", "", ["rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"], [], ""],
-["arifle_TRG20_F", "", "", "", ["rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"], [], ""]
+["MCC_KS3_FDE_Bravo", "", "", "", ["rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"], [], ""]
 ]];
 _militiaLoadoutData set ["grenadeLaunchers", [
-["rhs_weap_mk18_m320", "", "", "", ["rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"], ["rhs_mag_M433_HEDP", "rhs_mag_M433_HEDP", "rhs_mag_M397_HET"], ""],
-["arifle_TRG21_GL_F", "", "", "", ["rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"], ["rhs_mag_M433_HEDP", "rhs_mag_M433_HEDP", "rhs_mag_M397_HET"], ""]
+["rhs_weap_mk18_m320", "", "", "", ["rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"], ["rhs_mag_M433_HEDP", "rhs_mag_M433_HEDP", "rhs_mag_M397_HET"], ""]
 ]];
-_militiaLoadoutData set ["SMGs", ["SMG_01_F", "SMG_02_F", "SMG_03_black", "SMG_03C_black"]];
+_militiaLoadoutData set ["SMGs", []];
 _militiaLoadoutData set ["machineGuns", [
-["LMG_Mk200_F", "", "", "", ["200Rnd_65x39_cased_Box_Red", "200Rnd_65x39_cased_Box_Red", "200Rnd_65x39_cased_Box_Tracer_Red"], [], "bipod_03_f_blk"]
+["UK3CB_BAF_L7A2", "", "", "", ["UK3CB_BAF_762_100Rnd", "UK3CB_BAF_762_100Rnd", "UK3CB_BAF_762_100Rnd_T"], [], "UK3CB_underbarrel_acc_fgrip_bipod"]
 ]];
-_militiaLoadoutData set ["marksmanRifles", [["srifle_EBR_F", "", "", "optic_MRCO", [], [], ""] ]];
-_militiaLoadoutData set ["sniperRifles", [["srifle_EBR_F", "", "", "optic_SOS", [], [], ""] ]];
+_militiaLoadoutData set ["marksmanRifles", [["UK3CB_BAF_L129A1", "", "", "UK3CB_BAF_TA648_308", [], [], ""] ]];
+_militiaLoadoutData set ["sniperRifles", [["UK3CB_BAF_L129A1", "", "", "UK3CB_BAF_TA648_308", [], [], ""] ]];
 _militiaLoadoutData set ["sidearms", ["hgun_ACPC2_F"]];
 
 //////////////////////////
@@ -367,15 +341,15 @@ _militiaLoadoutData set ["sidearms", ["hgun_ACPC2_F"]];
 //////////////////////////
 //The following lines are determining the loadout of the vehicle crew
 private _crewLoadoutData = _militaryLoadoutData call _fnc_copyLoadoutData; // touch and shit breaks
-_crewLoadoutData set ["uniforms", ["U_Tank_green_F"]];			//this line determines uniforms for vehicle crew loadouts -- Example: ["U_B_CombatUniform_mcam", "U_B_CombatUniform_mcam_tshirt"] -- Array, can contain multiple assets
+_crewLoadoutData set ["uniforms", ["UK3CB_BAF_U_CombatUniform_MTP"]];			//this line determines uniforms for vehicle crew loadouts -- Example: ["U_B_CombatUniform_mcam", "U_B_CombatUniform_mcam_tshirt"] -- Array, can contain multiple assets
 _crewLoadoutData set ["vests", ["V_BandollierB_oli"]];				//this line determines vests for vehicle crew loadouts -- Example: ["V_PlateCarrierSpec_mtp", "V_PlateCarrierGL_mtp"] -- Array, can contain multiple assets
-_crewLoadoutData set ["helmets", ["H_HelmetCrew_I"]];			//this line determines backpacks for vehicle crew loadouts -- Example: ["B_AssaultPack_mcamo", "B_Kitbag_mcamo"] -- Array, can contain multiple assets
+_crewLoadoutData set ["helmets", ["rhsusf_cvc_green_ess"]];			//this line determines backpacks for vehicle crew loadouts -- Example: ["B_AssaultPack_mcamo", "B_Kitbag_mcamo"] -- Array, can contain multiple assets
 
 //The following lines are determining the loadout of the pilots
 private _pilotLoadoutData = _militaryLoadoutData call _fnc_copyLoadoutData;
-_pilotLoadoutData set ["uniforms", ["U_I_HeliPilotCoveralls"]];			//this line determines uniforms for pilot loadouts -- Example: ["U_B_CombatUniform_mcam", "U_B_CombatUniform_mcam_tshirt"] -- Array, can contain multiple assets
+_pilotLoadoutData set ["uniforms", ["UK3CB_BAF_U_HeliPilotCoveralls_Army"]];			//this line determines uniforms for pilot loadouts -- Example: ["U_B_CombatUniform_mcam", "U_B_CombatUniform_mcam_tshirt"] -- Array, can contain multiple assets
 _pilotLoadoutData set ["vests", ["V_TacVest_oli"]];			//this line determines vests for pilot loadouts -- Example: ["V_PlateCarrierSpec_mtp", "V_PlateCarrierGL_mtp"] -- Array, can contain multiple assets
-_pilotLoadoutData set ["helmets", ["H_PilotHelmetHeli_I", "H_CrewHelmetHeli_I"]];			//this line determines backpacks for pilot loadouts -- Example: ["B_AssaultPack_mcamo", "B_Kitbag_mcamo"] -- Array, can contain multiple assets
+_pilotLoadoutData set ["helmets", ["rhsusf_hgu56p_visor_black"]];			//this line determines backpacks for pilot loadouts -- Example: ["B_AssaultPack_mcamo", "B_Kitbag_mcamo"] -- Array, can contain multiple assets
 
 
 // ##################### DO NOT TOUCH ANYTHING BELOW THIS LINE #####################
