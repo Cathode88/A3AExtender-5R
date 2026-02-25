@@ -13,7 +13,6 @@ class CfgPatches {
         VERSION_CONFIG;
     };
 };
-
 //the pre proccessor ifs are there to make sure we overwrite/add to the correct config
 class A3A {
 #if __A3_DEBUG__

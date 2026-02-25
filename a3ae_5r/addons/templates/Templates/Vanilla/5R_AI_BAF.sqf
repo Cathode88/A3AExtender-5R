@@ -2,7 +2,7 @@
 //   Side Information   //
 //////////////////////////
 
-["name", "5R BAF Custom"] call _fnc_saveToTemplate; 						//this line determines the faction name -- Example: ["name", "NATO"] - ENTER ONLY ONE OPTION
+["name", "5R BAF"] call _fnc_saveToTemplate; 						//this line determines the faction name -- Example: ["name", "NATO"] - ENTER ONLY ONE OPTION
 ["spawnMarkerName", "5R BAF Support Corridor"] call _fnc_saveToTemplate; 			//this line determines the name tag for the "carrier" on the map -- Example: ["spawnMarkerName", "NATO support corridor"] - ENTER ONLY ONE OPTION
 
 ["flag", "Flag_UK_F"] call _fnc_saveToTemplate; 						//this line determines the flag -- Example: ["flag", "Flag_NATO_F"] - ENTER ONLY ONE OPTION
@@ -40,9 +40,7 @@
 ]] call _fnc_saveToTemplate; 			//this line determines the trucks -- Example: ["vehiclesTrucks", ["B_Truck_01_transport_F", "B_Truck_01_covered_F"]] -- Array, can contain multiple assets
 ["vehiclesCargoTrucks", [
 	"UK3CB_BAF_MAN_HX60_Cargo_Green_A",
-	"UK3CB_BAF_MAN_HX60_Cargo_Green_B",
-	"UK3CB_BAF_MAN_HX58_Cargo_Green_A",
-	"UK3CB_BAF_MAN_HX58_Cargo_Green_B"
+	"UK3CB_BAF_MAN_HX58_Cargo_Green_A"
 ]] call _fnc_saveToTemplate; 		//this line determines cargo trucks -- Example: ["vehiclesCargoTrucks", ["B_Truck_01_transport_F", "B_Truck_01_covered_F"]] -- Array, can contain multiple assets
 ["vehiclesAmmoTrucks", [
 	"UK3CB_BAF_Coyote_Logistics_L111A1_G",
@@ -116,13 +114,18 @@
 	"UK3CB_BAF_MAN_HX58_Transport_Green",
 	"UK3CB_BAF_MAN_HX60_Transport_Green"
 ]] call _fnc_saveToTemplate; 	//this line determines militia trucks (unarmed) -- Example: ["vehiclesMilitiaTrucks", ["B_G_Van_01_transport_F"]] -- Array, can contain multiple assets
-["vehiclesMilitiaCars", ["B_G_Offroad_01_F"]] call _fnc_saveToTemplate; 		//this line determines militia cars (unarmed) -- Example: ["vehiclesMilitiaCars", ["B_G_Offroad_01_F"]] -- Array, can contain multiple assets
+["vehiclesMilitiaCars", [
+	"UK3CB_BAF_LandRover_Hard_FFR_Green_A",
+	"UK3CB_BAF_LandRover_Hard_FFR_Green_B",
+	"UK3CB_BAF_LandRover_Soft_Green_A",
+	"UK3CB_BAF_LandRover_Soft_Green_B"
+	]] call _fnc_saveToTemplate; 		//this line determines militia cars (unarmed) -- Example: ["vehiclesMilitiaCars", ["B_G_Offroad_01_F"]] -- Array, can contain multiple assets
 
 ["vehiclesPolice", ["B_GEN_Offroad_01_gen_F"]] call _fnc_saveToTemplate; 			//this line determines police cars -- Example: ["vehiclesPolice", ["B_GEN_Offroad_01_gen_F"]] -- Array, can contain multiple assets
 
-["staticMGs", ["I_HMG_02_high_F"]] call _fnc_saveToTemplate; 					//this line determines static MGs -- Example: ["staticMG", ["B_HMG_01_high_F"]] -- Array, can contain multiple assets
-["staticAT", ["I_static_AT_F"]] call _fnc_saveToTemplate; 					//this line determinesstatic ATs -- Example: ["staticAT", ["B_static_AT_F"]] -- Array, can contain multiple assets
-["staticAA", ["I_static_AA_F"]] call _fnc_saveToTemplate; 					//this line determines static AAs -- Example: ["staticAA", ["B_static_AA_F"]] -- Array, can contain multiple assets
+["staticMGs", ["UK3CB_BAF_Static_L7A2_Deployed_High","UK3CB_BAF_Static_L111A1_Deployed_High"]] call _fnc_saveToTemplate; 					//this line determines static MGs -- Example: ["staticMG", ["B_HMG_01_high_F"]] -- Array, can contain multiple assets
+["staticAT", ["RHS_TOW_TriPod_USMC_WD"]] call _fnc_saveToTemplate; 					//this line determinesstatic ATs -- Example: ["staticAT", ["B_static_AT_F"]] -- Array, can contain multiple assets
+["staticAA", ["RHS_Stinger_AA_pod_USMC_WD"]] call _fnc_saveToTemplate; 					//this line determines static AAs -- Example: ["staticAA", ["B_static_AA_F"]] -- Array, can contain multiple assets
 ["staticMortars", ["B_Mortar_01_F"]] call _fnc_saveToTemplate; 				//this line determines static mortars -- Example: ["staticMortars", ["B_Mortar_01_F"]] -- Array, can contain multiple assets
 
 ["mortarMagazineHE", "8Rnd_82mm_Mo_shells"] call _fnc_saveToTemplate; 			//this line determines available HE-shells for the static mortars - !needs to be compatible with the mortar! -- Example: ["mortarMagazineHE", "8Rnd_82mm_Mo_shells"] - ENTER ONLY ONE OPTION
@@ -148,7 +151,9 @@ _loadoutData set ["carbines", [
 _loadoutData set ["grenadeLaunchers", [
 ["rhs_weap_mk18_m320", ["rhsusf_acc_su230_mrds_c","MCC_EXPS3_FDE_Down","MCC_EXPS3_FDE"], "ACE_DBAL_A3_Red", ["rhs_mag_M433_HEDP","rhs_mag_M433_HEDP"], ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red","rhs_mag_30Rnd_556x45_M855A1_Stanag"]]
 ]];
-_loadoutData set ["SMGs", []];
+_loadoutData set ["SMGs", [
+["MCC_KS3_FDE_Bravo", "", "", "", ["rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"], [], ""]
+]];
 _loadoutData set ["machineGuns", [
 ["UK3CB_BAF_L7A2", "", "", "", ["UK3CB_BAF_762_100Rnd","UK3CB_BAF_762_100Rnd_T"]],
 ["UK3CB_BAF_L110_762", "rhsusf_acc_su230a_mrds_c", "ACE_DBAL_A3_Red", "", ["UK3CB_BAF_762_100Rnd","UK3CB_BAF_762_100Rnd_T"]]
@@ -156,7 +161,9 @@ _loadoutData set ["machineGuns", [
 _loadoutData set ["marksmanRifles", [
 ["UK3CB_BAF_L129A1", "UK3CB_BAF_TA648_308", "ACE_DBAL_A3_Red", "", ["UK3CB_BAF_762_L42A1_20Rnd_T"]]
 ]];
-_loadoutData set ["sniperRifles", []];
+_loadoutData set ["sniperRifles", [
+["UK3CB_BAF_L129A1", "UK3CB_BAF_TA648_308", "ACE_DBAL_A3_Red", "", ["UK3CB_BAF_762_L42A1_20Rnd_T"]]
+]];
 
 _loadoutData set ["lightATLaunchers", ["UK3CB_BAF_AT4_CS_AP_Launcher","UK3CB_BAF_AT4_CS_AT_Launcher"]];
 _loadoutData set ["ATLaunchers", [
@@ -168,7 +175,7 @@ _loadoutData set ["ATLaunchers", [
 ["launch_MRAWS_green_rail_F", "", "ACE_DBAL_A3_Red", "", ["MRAWS_HEAT_F", "MRAWS_HE_F"], [], ""]	
 ]];
 _loadoutData set ["missileATLaunchers", [
-["rhs_weap_fgm148", "", "", "", ["UK3CB_BAF_Javelin_Slung_Tube"], [], ""]
+["UK3CB_BAF_Javelin_Launcher","","","",["UK3CB_BAF_Javelin_Mag",1],[],""]
 ]];
 _loadoutData set ["AALaunchers", [
 ["rhs_weap_fim92", "", "", "", ["rhs_fim92_mag"], [], ""]
@@ -252,7 +259,9 @@ _sfLoadoutData set ["carbines", [
 _sfLoadoutData set ["grenadeLaunchers", [
 ["rhs_weap_mk18_m320", "rhsusf_acc_nt4_tan", "ACE_DBAL_A3_Red", "rhsusf_acc_su230_mrds_c", ["rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"], ["rhs_mag_M433_HEDP", "rhs_mag_M433_HEDP", "rhs_mag_M397_HET"], ""]
 ]];
-_sfLoadoutData set ["SMGs", []];
+_sfLoadoutData set ["SMGs", [
+["MCC_KS3_FDE_Bravo", "", "", "", ["rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"], [], ""]
+]];
 _sfLoadoutData set ["machineGuns", [
 ["UK3CB_BAF_L110_762", "", "ACE_DBAL_A3_Red", "rhsusf_acc_su230a_mrds_c", ["UK3CB_BAF_762_100Rnd","UK3CB_BAF_762_100Rnd_T"]]
 ]];
@@ -284,14 +293,20 @@ _militaryLoadoutData set ["carbines", [
 _militaryLoadoutData set ["grenadeLaunchers", [
 ["rhs_weap_mk18_m320", "", "ACE_DBAL_A3_Red", "rhsusf_acc_su230_mrds_c", ["rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"], ["rhs_mag_M433_HEDP", "rhs_mag_M433_HEDP", "rhs_mag_M397_HET"], ""]
 ]];
-_militaryLoadoutData set ["SMGs", []];
+_militaryLoadoutData set ["SMGs", [
+["MCC_KS3_FDE_Bravo", "", "ACE_DBAL_A3_Red", "MCC_EXPS3_FDE_Down", ["rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"], [], ""],
+["MCC_KS3_FDE_Bravo", "", "ACE_DBAL_A3_Red", "MCC_EXPS3_FDE", ["rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"], [], ""]
+]];
 _militaryLoadoutData set ["machineGuns", [
-["UK3CB_BAF_L7A2", "", "ACE_DBAL_A3_Red", "rhsusf_acc_su230a_mrds_c", ["UK3CB_BAF_762_100Rnd", "UK3CB_BAF_762_100Rnd", "UK3CB_BAF_762_100Rnd_T"], [], "UK3CB_underbarrel_acc_fgrip_bipod"]
+["UK3CB_BAF_L7A2", "", "ACE_DBAL_A3_Red", "rhsusf_acc_su230a_mrds_c", ["UK3CB_BAF_762_100Rnd", "UK3CB_BAF_762_100Rnd", "UK3CB_BAF_762_100Rnd_T"], [], "UK3CB_underbarrel_acc_fgrip_bipod"],
+["UK3CB_BAF_L110_762", "rhsusf_acc_su230a_mrds_c", "ACE_DBAL_A3_Red", "", ["UK3CB_BAF_762_100Rnd","UK3CB_BAF_762_100Rnd_T"]]
 ]];
 _militaryLoadoutData set ["marksmanRifles", [
 ["UK3CB_BAF_L129A1", "", "ACE_DBAL_A3_Red", "UK3CB_BAF_TA648_308", [], [], "UK3CB_underbarrel_acc_bipod"]
 ]];
-_militaryLoadoutData set ["sniperRifles", []];
+_militaryLoadoutData set ["sniperRifles", [
+["UK3CB_BAF_L129A1", "", "ACE_DBAL_A3_Red", "UK3CB_BAF_TA648_308", [], [], "UK3CB_underbarrel_acc_bipod"]
+]];
 _militaryLoadoutData set ["sidearms", [
 ["hgun_Pistol_heavy_01_F", "", "acc_flashlight_pistol", "", [], [], ""],
 ["hgun_ACPC2_F", "", "acc_flashlight_pistol", "", [], [], ""]
@@ -315,7 +330,7 @@ _policeLoadoutData set ["sidearms", []];
 private _militiaLoadoutData = _loadoutData call _fnc_copyLoadoutData; // touch and shit breaks
 _militiaLoadoutData set ["uniforms", ["UK3CB_BAF_U_CombatUniform_MTP"]];		//this line determines uniforms for militia loadouts -- Example: ["U_B_CombatUniform_mcam", "U_B_CombatUniform_mcam_tshirt"] -- Array, can contain multiple assets
 _militiaLoadoutData set ["vests", ["V_Chestrig_rgr"]];			//this line determines vests for militia loadouts -- Example: ["V_PlateCarrierSpec_mtp", "V_PlateCarrierGL_mtp"] -- Array, can contain multiple assets
-_militiaLoadoutData set ["Hvests", ["V_PlateCarrier2_rgr_noflag_F","UK3CB_V_PlateCarrier2_brn"]];
+_militiaLoadoutData set ["Hvests", ["V_PlateCarrier2_rgr_noflag_F"]];
 _militiaLoadoutData set ["backpacks", ["B_AssaultPack_mcamo","B_Kitbag_mcamo"]];		//this line determines backpacks for militia loadouts -- Example: ["B_AssaultPack_mcamo", "B_Kitbag_mcamo"] -- Array, can contain multiple assets
 _militiaLoadoutData set ["helmets", ["5r_headgear_virtus_D","5r_headgear_virtus_J","5r_headgear_virtus_I","5r_headgear_virtus_F","5r_headgear_virtus_B","5r_headgear_virtus_C","5r_headgear_virtus_H","5r_headgear_virtus_G","5r_headgear_virtus_A","5r_headgear_virtus_K","5r_headgear_virtus_M","5r_headgear_virtus_E","5r_headgear_virtus_L","5r_headgear_virtus_N"]];		//this line determines helmets for police loadouts -- Example: ["H_HelmetB_camo", "H_HelmetB_desert"] -- Array, can contain multiple assets
 
@@ -328,7 +343,9 @@ _militiaLoadoutData set ["carbines", [
 _militiaLoadoutData set ["grenadeLaunchers", [
 ["rhs_weap_mk18_m320", "", "", "", ["rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"], ["rhs_mag_M433_HEDP", "rhs_mag_M433_HEDP", "rhs_mag_M397_HET"], ""]
 ]];
-_militiaLoadoutData set ["SMGs", []];
+_militiaLoadoutData set ["SMGs", [
+["MCC_KS3_FDE_Bravo", "", "", "", ["rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"], [], ""]
+]];
 _militiaLoadoutData set ["machineGuns", [
 ["UK3CB_BAF_L7A2", "", "", "", ["UK3CB_BAF_762_100Rnd", "UK3CB_BAF_762_100Rnd", "UK3CB_BAF_762_100Rnd_T"], [], "UK3CB_underbarrel_acc_fgrip_bipod"]
 ]];
@@ -477,7 +494,6 @@ private _explosivesExpertTemplate = {
 
 	[selectRandom ["rifles", "carbines"]] call _fnc_setPrimary;
 	["primary", 6] call _fnc_addMagazines;
-
 
 	["sidearms"] call _fnc_setHandgun;
 	["handgun", 2] call _fnc_addMagazines;
