@@ -4,13 +4,9 @@ class CfgFunctions
     {
         class x5r
         {
-            file = QPATHTOFOLDER(x5r);
+            file = QPATHTOFOLDER(5r);
 
     		class brushCutter 
-    		{
-    			postInit = 1;
-    		};
-    		class toggleVehSectionFlagActions 
     		{
     			postInit = 1;
     		};
